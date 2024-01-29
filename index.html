@@ -540,11 +540,44 @@ function wccp_pro_is_passive() {
 /*special for safari End*/
 </script>
 <script id="wpcp_disable_Right_Click" type="text/javascript">
-document.ondragstart = function() { return false;}
-	function nocontext(e) {
-	   return false;
+// document.ondragstart = function() { return false;}
+// 	function nocontext(e) {
+// 	   return false;
+// 	}
+// 	document.oncontextmenu = nocontext;
+
+const imagesArray = [
+	"./images/1.jpeg",
+	"./images/2.jpeg",
+	"./images/3.jpeg",
+	"./images/4.jpeg",
+	"./images/5.jpeg",
+	"./images/6.jpeg",
+	"./images/7.jpeg",
+	"./images/8.jpeg",
+	"./images/9.jpeg",
+	"./images/10.jpeg"
+]
+window.addEventListener("load",function() {
+
+	background= document.querySelector (".elementor-7 .elementor-element.elementor-element-30d1fe7:not(.elementor-motion-effects-element-type-background")
+	console.log(background.style.backgroundImage = `url(${imagesArray[1 ]})`);
+	const images = document.getElementsByTagName("img");
+    for (var i=0; i<images.length; i++) {
+	  images[i].src = imagesArray[i]
+	  images[i].srcset = imagesArray[i]
+	 
 	}
-	document.oncontextmenu = nocontext;
+
+	const callImage = document.querySelector(".wp-call-button img");
+
+callImage.src = "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDU5cHgiIGhlaWdodD0iNDU5cHgiIHZpZXdCb3g9IjAgMCA0NTkgNDU5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTkgNDU5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGcgaWQ9ImNhbGwiPjxwYXRoIHN0eWxlPSJmaWxsOiB3aGl0ZTsiIGQ9Ik05MS44LDE5OC45YzM1LjcsNzEuNCw5Ni45LDEzMC4wNSwxNjguMywxNjguM0wzMTYuMiwzMTEuMWM3LjY0OS03LjY0OSwxNy44NS0xMC4xOTksMjUuNS01LjFjMjguMDUsMTAuMiw1OC42NDksMTUuMyw5MS44LDE1LjNjMTUuMywwLDI1LjUsMTAuMiwyNS41LDI1LjV2ODYuN2MwLDE1LjMtMTAuMiwyNS41LTI1LjUsMjUuNUMxOTMuOCw0NTksMCwyNjUuMiwwLDI1LjVDMCwxMC4yLDEwLjIsMCwyNS41LDBoODkuMjVjMTUuMywwLDI1LjUsMTAuMiwyNS41LDI1LjVjMCwzMC42LDUuMSw2MS4yLDE1LjMsOTEuOGMyLjU1LDcuNjUsMCwxNy44NS01LjEsMjUuNUw5MS44LDE5OC45eiIvPjwvZz48L2c+PC9zdmc+"
+
+callImage.srcset = "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNDU5cHgiIGhlaWdodD0iNDU5cHgiIHZpZXdCb3g9IjAgMCA0NTkgNDU5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTkgNDU5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGcgaWQ9ImNhbGwiPjxwYXRoIHN0eWxlPSJmaWxsOiB3aGl0ZTsiIGQ9Ik05MS44LDE5OC45YzM1LjcsNzEuNCw5Ni45LDEzMC4wNSwxNjguMywxNjguM0wzMTYuMiwzMTEuMWM3LjY0OS03LjY0OSwxNy44NS0xMC4xOTksMjUuNS01LjFjMjguMDUsMTAuMiw1OC42NDksMTUuMyw5MS44LDE1LjNjMTUuMywwLDI1LjUsMTAuMiwyNS41LDI1LjV2ODYuN2MwLDE1LjMtMTAuMiwyNS41LTI1LjUsMjUuNUMxOTMuOCw0NTksMCwyNjUuMiwwLDI1LjVDMCwxMC4yLDEwLjIsMCwyNS41LDBoODkuMjVjMTUuMywwLDI1LjUsMTAuMiwyNS41LDI1LjVjMCwzMC42LDUuMSw2MS4yLDE1LjMsOTEuOGMyLjU1LDcuNjUsMCwxNy44NS01LjEsMjUuNUw5MS44LDE5OC45eiIvPjwvZz48L2c+PC9zdmc+"
+
+});
+
+
 </script>
 <style>
 .unselectable
@@ -1055,7 +1088,7 @@ class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemsco
 			<div class="footer-widget-area-inner site-info-inner"><section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title">الأقسام</h2><nav class="menu-%d8%a7%d9%84%d8%a3%d9%82%d8%b3%d8%a7%d9%85-container" aria-label="الأقسام"><ul id="menu-%d8%a7%d9%84%d8%a3%d9%82%d8%b3%d8%a7%d9%85" class="menu"><li id="menu-item-1813" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1813"><a href="/" class="menu-link">خدمات تنظيف منازل</a></li>
 <li id="menu-item-1815" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1815"><a href="./تنظيف-بالبخار.html" class="menu-link">خدمات تنظيف بالبخار</a></li>
 <li id="menu-item-1816" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1816"><a href="تنظيف-خزانات.html" class="menu-link">خدمات تنظيف خزانات</a></li>
-<li id="menu-item-1817" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1817"><a href="" class="menu-link">خدمات مكافحة حشرات</a></li>
+
 <li id="menu-item-1814" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1814"><a href="" class="menu-link">خدمات أخري</a></li>
 </ul></nav></section></div>		</aside>
 						</div>
