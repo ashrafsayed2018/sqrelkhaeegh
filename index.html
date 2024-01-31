@@ -579,8 +579,10 @@ window.addEventListener("load",function() {
 
 	const images = document.getElementsByTagName("img");
     for (var i=0; i<images.length; i++) {
+		if (!images.classList.contains("logo") || images.classList.contains("custom-logo")) {
 	  images[i].src = imagesArray[i]
 	  images[i].srcset = imagesArray[i]
+		}
 	 
 	}
 
@@ -685,7 +687,7 @@ class="hfeed site" id="page">
 											<div
 				class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"				>
 					<span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home" aria-current="page">
-						صقر الخليج</a></span>				</div>
+						 <img src="./images/logo.png" class="logo" alt="logo"></a></span>				</div>
 			<!-- .site-branding -->
 					</div>
 												<div class="site-header-primary-section-left-center site-header-section ast-flex ast-grid-left-center-section">
@@ -725,7 +727,7 @@ class="hfeed site" id="page">
 										<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
 											<div
 				class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"				>
-					<span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="200" height="60" src="" class="custom-logo" alt="صقر الخليج للخدمات العامة" decoding="async" srcset="" /></a></span>				</div>
+					<span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home" aria-current="page"><img width="200" height="60" src="./images/logo.png" class="custom-logo" alt="صقر الخليج للخدمات العامة" decoding="async" srcset="" /></a></span>				</div>
 			<!-- .site-branding -->
 					</div>
 									</div>
